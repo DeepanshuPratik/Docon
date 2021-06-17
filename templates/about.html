@@ -1,0 +1,210 @@
+{% extends 'base.html' %}
+{% block head %} 
+<style>
+    .container{
+        margin-top: 15%;
+    }
+    .text-area{
+        width: 100%;
+        height: 300px;
+        display: block;
+        text-align: center;
+        padding: 40% 5%;
+        background: #262626;
+        color: #fff;
+        border-radius: 15px;
+    }
+    .text-area h2{
+        font-size:25px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .text-area p{
+        font-size: 14px;
+    }
+    .single-box{
+        position: relative;
+        margin-bottom: 30px;
+    }
+    .img-area{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: 5px solid #fff;
+        overflow: hidden;
+        top: 15px;
+        left: 125px;
+        border-radius: 50%;
+    }
+    .img-area img{
+        width: 100%;
+    }
+    .carousel-indicators{
+        left: 0;
+        top: auto;
+        bottom: -30px;
+    }
+    .carousel-indicators li{
+        background: greenyellow;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+    }
+    .carousel-indicators .active{
+        background: #000;
+    }
+</style>
+{% endblock head %}
+{% block title %}About{% endblock title %}
+{% block body %}
+<h1 class="text-center my-5">FOUNDERS</h1>
+<div class="container my-0">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="single-box">
+                                <div class="img-area">
+                                    <img src="static/download.jpg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <h2>Deepanshu Pratik</h2>
+                                    <p>B.Tech student at IIIT-NR</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="single-box">
+                                <div class="img-area">
+                                    <img src="static/download.jpg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <h2>Kshitij Chauhan</h2>
+                                    <p>B.Tech student at IIIT-NR</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="single-box">
+                                <div class="img-area">
+                                    <img src="static/download.jpg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <h2>Vikalp Tripathi</h2>
+                                    <p>B.Tech student at IIIT-NR</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1 class="text-center">OUR DOCTORS</h1>
+<div class="container my-4">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="single-box">
+                                <div class="img-area">
+                                    <img src="static/download.jpg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <h2>Person 1</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="single-box">
+                                <div class="img-area">
+                                    <img src="static/download.jpg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <h2>Person 2</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="single-box">
+                                <div class="img-area">
+                                    <img src="static/download.jpg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <h2>Person 3</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="single-box">
+                                <div class="img-area">
+                                    <img src="static/download.jpg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <h2>Person 4</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="single-box">
+                                <div class="img-area">
+                                    <img src="static/download.jpg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <h2>Person 5</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="single-box">
+                                <div class="img-area">
+                                    <img src="static/download.jpg" alt="">
+                                </div>
+                                <div class="text-area">
+                                    <h2>Person 6</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                  </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon-hidden" aria-hidden="true"></span>
+                  <span class="sr-only"></span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon-hidden" aria-hidden="true"></span>
+                  <span class="sr-only"></span>
+                </a>
+              </div>
+        </div>
+    </div>
+</div>
+    
+        
+            
+{% endblock body %}
+

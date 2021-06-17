@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Book Appointment{% endblock title %}
+
+{% block body %}
+
+<div class="container ">
+<h1 class="text-center">Book an Appointment</h1>
+ 
+ <form method="post" >
+ {% csrf_token %}
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="phone">Phone Number</label>
+    <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your Phone Number">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="address">Problem</label>
+    <input type="address" class="form-control" id="address" name="address" placeholder="Enter your problem type">
+  </div>
+  <br>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock body %}
+

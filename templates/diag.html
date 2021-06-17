@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Diagnostic{% endblock title %}
+
+{% block body %}
+
+ <div class="container ">
+ <h1 class="text-center">Diagnostic</h1>
+ 
+ <form method="post">
+ {% csrf_token %}
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="phone">Phone Number</label>
+    <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your Phone Number">
+  </div>
+  <br>
+  <select class="form-select" multiple aria-label="multiple select example" name = "drop1">
+    <option value="CT Scans">CT Scans</option>
+    <option value="Kidney Biopsy">Kidney Biopsy</option>
+    <option value="Radionuclide Scans">Radionuclide Scans</option>
+    <option value="Amniocentesis">Amniocentesis</option>
+  </select>
+  <br>
+  <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+</form>
+<div class="container">{{message}}</div>
+{% endblock body %}

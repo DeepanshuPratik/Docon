@@ -1,0 +1,79 @@
+{% extends "login.html" %}
+{% load static %}
+
+{% block title %}
+    Sign Up
+{% endblock %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/sign-up">SignUp Page</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/sign-up">SignUp</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+<form method="POST" style="padding-bottom: 2rem;">{% csrf_token %}
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+    </div>
+    <div class="form-group">
+        <label for="exampleInput">Email</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email">   
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Password</label>
+      <input type="password" class="form-control" id="exampleInputEmail1" name="password" aria-describedby="emailHelp" placeholder="Enter Your Password">
+      
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Re-enter Password</label>
+        <input type="password" class="form-control" id="exampleInputEmail1" name="passwordVerif" aria-describedby="emailHelp" placeholder="Re-enter Your Password">
+        
+    </div>
+    <div class="container my-3">
+      <select class="form-select" multiple aria-label="multiple select example" name = "user">
+        <option value="DOCTOR">Doctor</option>
+        <option value="PATIENT">Patient</option>
+      </select>
+    </div>
+    <div class="container">
+      <button type="submit" class="btn btn-primary my-4">Submit</button>
+      
+      <br>
+    <b>{{ message }} </b>
+    </div>
+    
+</form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
