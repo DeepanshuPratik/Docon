@@ -70,6 +70,7 @@ def signUpPage(request):
         password = request.POST.get('password')
         passwordVerif = request.POST.get('passwordVerif')
         profession = request.POST.get('user')
+        data = request.POST.get('data')
 
         if(email ==''):
             context = {
@@ -84,7 +85,7 @@ def signUpPage(request):
             token = f.encrypt(password)
             key = str(key)
             print(key)
-            UserDetails.objects.create(email=email, name=name , password=token, key = key, profession=profession)
+            UserDetails.objects.create(email=email, name=name , password=token, key = key, profession=profession, data=data)
             return redirect("/")
         
         else:

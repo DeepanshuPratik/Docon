@@ -18,6 +18,7 @@ class UserDetails(models.Model):
     password = models.CharField(max_length=100)
     key = models.CharField(max_length=100, default=" ")
     profession = models.CharField(max_length=100, default="PATIENT" )
+    data = models.CharField(max_length=100, default=" ")
 
     def __str__(self):
         return self.email

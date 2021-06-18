@@ -89,8 +89,9 @@
   </button>
 </div>
 </div>
-{% for student in doctors %}
+
     <br> 
+    {% for x in doctors %}
     <div class="container my-0">
       <div class="row">
           <div class="col-md-12">
@@ -99,16 +100,18 @@
                     <div class="carousel-item active">
                       <div class="row">
                           <div class="col-md-4">
+                            
                               <div class="single-box">
                                   <div class="img-area">
                                       <img src="static/download.jpg" alt="">
                                   </div>
                                   <div class="text-area">
-                                      <h2>{{ student.name}}</h2>
-                                      <p>{{ student.email }}</p>
+                                      <h2>{{ x.name}}</h2>
+                                      <p>{{ x.email }}</p>
                                   </div>
                               </div>
                           </div>
+                          
                         </div>
                       </div>
                     </div>
