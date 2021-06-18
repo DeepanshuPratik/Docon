@@ -20,6 +20,11 @@
         text-transform: uppercase;
         letter-spacing: 2px;
     }
+    .text-area h3{
+      font-size:20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
     .text-area p{
         font-size: 14px;
     }
@@ -111,6 +116,32 @@
                                   </div>
                               </div>
                           </div>
+                          <div class="col-md-4">
+                            
+                            <div class="single-box">
+                                <div class="text-area">
+                                  <h3>Expertise and Experience</h3>
+                                  <p>{{ x.data }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            
+                          <div class="single-box">
+                              <div class="text-area">
+                                <h3>Book and appointment</h3>
+                                <form method="post" action="/contact">
+                                  {% csrf_token %}
+                                   <div class="form-group">
+                                    <label for="problem">Details</label>
+                                    <input type="text" class="form-control" id="problem" name="problem" placeholder="Enter your problem">
+                                  </div>
+                                  <br>
+                                  <button type="submit" class="btn btn-primary">BOOK</button>
+                                </form>
+                              </div>
+                          </div>
+                      </div>
                           
                         </div>
                       </div>

@@ -24,7 +24,6 @@ def homePage(request):
             key1 = object.key
             key1=key1[2:-1]
             key1 = bytes(key1,'utf-8')
-            print(key1)
             f = Fernet(key1)
             truepassword = object.password 
             truepassword = truepassword[2:-1]
@@ -42,6 +41,8 @@ def homePage(request):
         elif(password == truepassword):
             if object.profession == "PATIENT":
                 object1=UserDetails.objects.filter(profession="DOCTOR")
+                # name=(object.name)
+                # appointment(request,email,name)
                 context1={
                     'message':'Welcome '+object.name,
                     'mail' : object.email,
@@ -49,6 +50,7 @@ def homePage(request):
 
                 }
                 return render(request,"index.html",context1)
+                
             else:
                 context2={
                     'message':'Welcome '+object.name,
@@ -124,6 +126,7 @@ def contact(request):
         contact.save()
         # messages.success(request, 'Your message has been sent !')
     return render(request,"contact.html")
+
 def book(request):
     if request.method == "POST":
         email = request.POST.get('email')
@@ -161,3 +164,9 @@ def diag(request):
             diag.save()
         # messages.success(request, 'Your message has been sent !')
     return render(request,"diag.html")
+# def appointment(request,email,name):
+#     if request.method == "POST":
+#         problem = request.POST.get('problem')
+#         book = Appoint(problem=problem, email=email, name=name)
+#         book.save()
+#     return render(request,"index.html")
