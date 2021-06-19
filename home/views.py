@@ -99,10 +99,6 @@ def signUpPage(request):
     else:
         return render(request,"signup.html",{})
 
-# def dashBoard(request):
-
-#     return render(request,"index.html",{})
-
 
     
 # def index(request):
