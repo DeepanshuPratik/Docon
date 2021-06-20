@@ -1,7 +1,7 @@
 from django.db import models
 
-# Create your models here.
 
+# Model for contact storing details
 class Contact(models.Model):
     email = models.CharField(max_length=122)
     name = models.CharField(max_length=122)
@@ -12,6 +12,7 @@ class Contact(models.Model):
     def __str__(self):
         return self.name
         
+# Model for storing profile details
 class UserDetails(models.Model):
     name = models.CharField(max_length=100, default=" ")
     email = models.CharField(max_length=100)
@@ -23,6 +24,7 @@ class UserDetails(models.Model):
     def __str__(self):
         return self.email
 
+# Model for storing holding booking details
 class Book(models.Model):
     email = models.CharField(max_length=122)
     name = models.CharField(max_length=122)
@@ -33,6 +35,7 @@ class Book(models.Model):
     def __str__(self):
         return self.name+" "+self.problem
 
+# Model for storing reports for glitch related or issues details
 class Report(models.Model):
     email = models.CharField(max_length=122)
     name = models.CharField(max_length=122)
@@ -43,6 +46,7 @@ class Report(models.Model):
     def __str__(self):
         return self.name
 
+# Model for storing booking diagnostic details
 class Diagnostic(models.Model):
     email = models.CharField(max_length=122)
     name = models.CharField(max_length=122)

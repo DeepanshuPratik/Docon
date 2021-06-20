@@ -10,12 +10,12 @@ from .models import Diagnostic
 from datetime import datetime
 
 
-# Create your views here.
 
+# Function work upon login process.
 def homePage(request):
 
     if(request.method == 'POST'):
-
+        #if("login" in request.POST):
         email = request.POST.get('email')
         password = request.POST.get('password')
 
@@ -64,6 +64,8 @@ def homePage(request):
     else:
         return render(request,"login.html",{})
 
+
+# Function work upon signup process.
 def signUpPage(request):
 
     if(request.method == 'POST'):
@@ -100,18 +102,13 @@ def signUpPage(request):
         return render(request,"signup.html",{})
 
 
-    
-# def index(request):
-#     context={ 'alpha': 'This is sent'}
-#     if request.method=='POST':
-#         pass
-#     else: return render(request, 'index.html',context)
-    
-     #HttpResponse('This is homepage')
+# Functions work upon calling about page.
 def about(request):
     return render(request, 'about.html')
+# Functions work upon calling services page.
 def services(request):
     return render(request, 'services.html')
+# Functions work upon calling contact page.
 def contact(request):
     if request.method == "POST":
         email = request.POST.get('email')
@@ -120,9 +117,9 @@ def contact(request):
         address = request.POST.get('address')
         contact = Contact(email=email , name=name, phone=phone,address=address,date=datetime.today())
         contact.save()
-        # messages.success(request, 'Your message has been sent !')
     return render(request,"contact.html")
 
+# Functions work upon calling book appointment page.
 def book(request):
     if request.method == "POST":
         email = request.POST.get('email')
@@ -133,6 +130,7 @@ def book(request):
         book.save()
     return render(request,"book.html")
 
+# Functions work upon calling report page.
 def report(request):
     if request.method == "POST":
         email = request.POST.get('email')
@@ -143,6 +141,7 @@ def report(request):
         report.save()
     return render(request,"report.html")
 
+# Functions work upon calling diagnostic booking page.
 def diag(request):
     if request.method == "POST":
         email = request.POST.get('email')
@@ -158,8 +157,9 @@ def diag(request):
         else:
             diag = Diagnostic(email=email , name=name, phone=phone, tests=tests, date=datetime.today())
             diag.save()
-        # messages.success(request, 'Your message has been sent !')
     return render(request,"diag.html")
+
+
 # def appointment(request,email,name):
 #     if request.method == "POST":
 #         problem = request.POST.get('problem')
